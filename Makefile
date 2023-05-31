@@ -1,6 +1,6 @@
 TIMESTAMP := $(shell date -u +"%Y%m%d%H%M%S")
 
-.PHONY: all clean
+.PHONY: all clean sync
 
 all:
 	docker build --tag zmk --file Dockerfile .
@@ -13,3 +13,8 @@ all:
 clean:
 	rm -f firmware/*.uf2
 	docker image rm zmk docker.io/zmkfirmware/zmk-build-arm:stable
+
+sync:
+	git merge upstream/V2.0 || true
+	git checkout --ours README.md
+	git add README.md
