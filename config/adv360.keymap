@@ -59,11 +59,11 @@
     };
     arrows {
       bindings = <
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                                        &trans             &trans        &trans        &trans      &trans            &trans            &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                                        &trans             &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(UP)  &kp LG(RIGHT)     &kp LA(LS(UP))    &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans                &trans  &trans  &none  &none    &trans  &trans          &trans             &kp LEFT      &kp DOWN      &kp UP      &kp RIGHT         &kp LG(LS(T))     &trans
-        &trans  &trans  &trans  &trans  &trans  &trans                &none   &none   &trans  &none  &none    &trans  &none   &none                      &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(UP)  &kp LA(RIGHT)     &kp LA(LS(DOWN))  &trans
-        &trans  &trans  &trans  &trans  &trans                        &trans  &trans  &trans                  &trans  &trans  &trans                     &trans        &trans        &trans      &kp LG(LS(LBKT))  &kp LG(LS(RBKT))
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                                      &trans  &trans        &trans        &trans      &trans            &trans            &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                                      &trans  &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(UP)  &kp LG(RIGHT)     &kp LA(LS(UP))    &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans                &trans  &trans  &none  &none  &trans  &trans          &trans  &kp LEFT      &kp DOWN      &kp UP      &kp RIGHT         &kp LG(LS(T))     &trans
+        &trans  &trans  &trans  &trans  &trans  &trans                &none   &none   &trans  &none  &none  &trans  &none   &none           &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(UP)  &kp LA(RIGHT)     &kp LA(LS(DOWN))  &trans
+        &trans  &trans  &trans  &trans  &trans                        &trans  &trans  &trans                &trans  &trans  &trans          &trans        &trans        &trans      &kp LG(LS(LBKT))  &kp LG(LS(RBKT))
       >;
     };
     mod {
