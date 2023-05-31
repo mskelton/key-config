@@ -8,7 +8,6 @@
 #define DEFAULT 0
 #define WINDOW  1
 #define ARROWS  2
-#define NUMPAD  3
 #define MOD     4
 
 // Special keys
@@ -65,15 +64,6 @@
         &trans  &trans  &trans  &trans  &trans  &trans  &trans                &trans  &trans                  &trans  &trans          &trans             &kp LEFT      &kp DOWN      &kp UP      &kp RIGHT         &kp LG(LS(T))     &trans
         &trans  &trans  &trans  &trans  &trans  &trans                &none   &none   &trans  &none  &none    &trans  &none   &none                      &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(UP)  &kp LA(RIGHT)     &kp LA(LS(DOWN))  &trans
         &trans  &trans  &trans  &trans  &trans                        &trans  &trans  &trans                  &trans  &trans  &trans                     &trans        &trans        &trans      &kp LG(LS(LBKT))  &kp LG(LS(RBKT))
-      >;
-    };
-    numpad {
-      bindings = <
-        &trans  &trans         &trans            &trans         &trans             &trans          &trans                                                                  &kp LG(LA(C_PWR))  &trans        &trans        &trans      &trans            &trans            &trans
-        &trans  &kp F13        &kp F14           &kp F15        &kp F16            &kp F17         &trans                                                                  &trans             &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(UP)  &kp LG(RIGHT)     &kp LA(LS(UP))    &trans
-        &trans  &kp MEH(LEFT)  &kp LA(LG(LEFT))  &kp LA(LG(F))  &kp LA(LG(RIGHT))  &kp MEH(RIGHT)  &trans          &trans  &trans                  &trans  &trans          &trans             &kp LEFT      &kp DOWN      &kp UP      &kp RIGHT         &kp LG(LS(T))     &trans
-        &trans  &trans         &trans            &trans         &kp LA(LG(I))      &trans                  &none   &none   &trans  &none  &none    &trans  &none   &none                      &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(UP)  &kp LA(RIGHT)     &kp LA(LS(DOWN))  &trans
-        &trans  &trans         &trans            &trans         &trans                                     &trans  &trans  &trans                  &trans  &trans  &trans                     &trans        &trans        &trans      &kp LG(LS(LBKT))  &kp LG(LS(RBKT))
       >;
     };
     mod {
