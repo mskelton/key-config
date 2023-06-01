@@ -8,7 +8,7 @@
 #define DEFAULT 0
 #define WINDOW  1
 #define ARROWS  2
-#define MOD     4
+#define MOD     3
 
 // Special keys
 #define HYPER(key)  LA(LC(LG(LS(key))))
