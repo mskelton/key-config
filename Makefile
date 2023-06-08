@@ -15,6 +15,7 @@ clean:
 	docker image rm zmk docker.io/zmkfirmware/zmk-build-arm:stable
 
 sync:
+	git fetch upstream
 	git merge upstream/V2.0 || true
 	git checkout --ours README.md
 	git add README.md
