@@ -6,13 +6,13 @@
 
 // Layers
 #define DEFAULT 0
-#define WINDOW  1
-#define ARROWS  2
-#define MOD     3
+#define WINDOW 1
+#define ARROWS 2
+#define MOD 3
 
 // Special keys
-#define HYPER(key)  LA(LC(LG(LS(key))))
-#define MEH(key)    LA(LC(LS(key)))
+#define HYPER(key) LA(LC(LG(LS(key))))
+#define MEH(key) LA(LC(LS(key)))
 
 // Key positions
 // 0  1  2  3  4  5  6                           7  8  9  10 11 12 13
@@ -20,59 +20,54 @@
 // 28 29 30 31 32 33 34      35 36   37 38       39 40 41 42 43 44 45
 // 46 47 48 49 50 51            52   53             54 55 56 57 58 59
 // 60 61 62 63 64         65 66 67   68 69 70          71 72 73 74 75
-
 / {
-    behaviors {
-      #include "macros.dtsi"
-
-      dm: dual_mod_key {
-        compatible = "zmk,behavior-hold-tap";
-        label = "DUAL_MOD_KEY";
-        #binding-cells = <2>;
-        flavor = "tap-preferred";
-        tapping-term-ms = <180>;
-        quick-tap-ms = <125>;
-        bindings = <&kp>, <&kp>;
-      };
+  behaviors {
+    dm: dual_mod_key {
+      compatible = "zmk,behavior-hold-tap";
+      label = "DUAL_MOD_KEY";
+      #binding-cells = <2>;
+      flavor = "tap-preferred";
+      tapping-term-ms = <180>;
+      quick-tap-ms = <125>;
+      bindings = <&kp>, <&kp>;
     };
-
+  };
   keymap {
     compatible = "zmk,keymap";
-
     default_layer {
       bindings = <
-        &macro_triple_grave  &kp N1         &kp N2       &kp N3         &kp N4      &kp N5  &mo MOD                                                                                                  &kp C_VOL_UP      &kp N6  &kp N7     &kp N8       &kp N9       &kp N0           &kp LA(LG(I))
-        &kp TAB              &kp Q          &kp W        &kp E          &kp R       &kp T   &caps_word                                                                                               &kp C_VOL_DN      &kp Y   &kp U      &kp I        &kp O        &kp P            &kp BSLH
-        &kp CAPS             &kp A          &kp S        &kp D          &kp F       &kp G   &kp LS(LC(LA(LGUI)))             &kp LG(LA(C))  &kp LG(LS(V))    &kp LA(LS(LC(M)))  &none                &kp LS(LC(LALT))  &kp H   &kp J      &kp K        &kp L        &kp SEMI         &kp SQT
-        &kp LSHFT            &dm LCTRL Z    &dm LALT X   &kp C          &kp V       &kp B                                                   &none            &none                                                     &kp N   &kp M      &kp COMMA    &kp DOT      &kp FSLH         &kp RSHFT
-        &kp GRAVE            &kp LC(SPACE)  &none        &kp LG(SPACE)  &mo ARROWS                                &kp SPACE  &kp LGUI       &mo WINDOW       &none              &kp ENTER  &kp BSPC                            &kp MINUS  &kp EQUAL    &kp LBKT     &kp RBKT         &kp RCTRL
+        &macro_triple_grave   &kp N1                &kp N2                &kp N3                &kp N4                &kp N5                &mo MOD                                                                                                                                                   &kp C_VOL_UP          &kp N6                &kp N7                &kp N8                &kp N9                &kp N0                &kp LA(LG(I))
+        &kp TAB               &kp Q                 &kp W                 &kp E                 &kp R                 &kp T                 &caps_word                                                                                                                                                &kp C_VOL_DN          &kp Y                 &kp U                 &kp I                 &kp O                 &kp P                 &kp BSLH
+        &kp CAPS              &kp A                 &kp S                 &kp D                 &kp F                 &kp G                 &kp LS(LC(LA(LGUI)))                        &kp LG(LA(C))         &kp LG(LS(V))         &kp LA(LS(LC(M)))     &none                                       &kp LS(LC(LALT))      &kp H                 &kp J                 &kp K                 &kp L                 &kp SEMI              &kp SQT
+        &kp LSHFT             &dm LCTRL Z           &dm LALT X            &kp C                 &kp V                 &kp B                                                                                   &none                 &none                                                                                   &kp N                 &kp M                 &kp COMMA             &kp DOT               &kp FSLH              &kp RSHFT
+        &kp GRAVE             &kp LC(SPACE)         &none                 &kp LG(SPACE)         &mo ARROWS                                                        &kp SPACE             &kp LGUI              &mo WINDOW            &none                 &kp ENTER             &kp BSPC                                                          &kp MINUS             &kp EQUAL             &kp LBKT              &kp RBKT              &kp RCTRL
       >;
     };
     window {
       bindings = <
-        &trans  &trans         &trans            &trans         &trans                &trans          &trans                                                    &kp LG(LA(C_PWR))  &trans         &trans         &trans         &trans         &trans            &trans
-        &trans  &kp F13        &kp F14           &kp F15        &kp F16               &kp F17         &trans                                                    &trans             &trans         &kp LG(LC(U))  &kp LG(LC(I))  &kp LG(LC(O))  &kp LG(LC(P))     &trans
-        &trans  &kp MEH(LEFT)  &kp LA(LG(LEFT))  &kp LA(LG(F))  &kp LA(LG(RIGHT))     &kp MEH(RIGHT)  &trans          &trans  &trans    &trans  &trans          &trans             &trans         &kp LG(LC(J))  &kp LG(LC(K))  &kp LG(LC(L))  &kp LG(LC(SEMI))  &trans
-        &trans  &trans         &trans            &trans         &kp LG(LA(I))         &trans                                  &trans    &trans                                     &trans         &trans         &trans         &trans         &trans            &trans
-        &trans  &trans         &trans            &trans         &trans                                        &trans  &trans  &trans    &trans  &trans  &trans                     &trans         &trans         &trans         &trans         &trans
+        &trans                &trans                &trans                &trans                &trans                &trans                &trans                                                                                                                                                    &kp LG(LA(C_PWR))     &trans                &trans                &trans                &trans                &trans                &trans
+        &trans                &kp F13               &kp F14               &kp F15               &kp F16               &kp F17               &trans                                                                                                                                                    &trans                &trans                &kp LG(LC(U))         &kp LG(LC(I))         &kp LG(LC(O))         &kp LG(LC(P))         &trans
+        &trans                &kp MEH(LEFT)         &kp LA(LG(LEFT))      &kp LA(LG(F))         &kp LA(LG(RIGHT))     &kp MEH(RIGHT)        &trans                                      &trans                &trans                &trans                &trans                                      &trans                &trans                &kp LG(LC(J))         &kp LG(LC(K))         &kp LG(LC(L))         &kp LG(LC(SEMI))      &trans
+        &trans                &trans                &trans                &trans                &kp LG(LA(I))         &trans                                                                                  &trans                &trans                                                                                  &trans                &trans                &trans                &trans                &trans                &trans
+        &trans                &trans                &trans                &trans                &trans                                                            &trans                &trans                &trans                &trans                &trans                &trans                                                            &trans                &trans                &trans                &trans                &trans
       >;
     };
     arrows {
       bindings = <
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans        &trans        &trans      &trans            &trans            &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(UP)  &kp LG(RIGHT)     &kp LA(LS(UP))    &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans  &trans          &trans  &kp LEFT      &kp DOWN      &kp UP      &kp RIGHT         &kp LG(LS(T))     &trans
-        &trans  &trans  &trans  &trans  &trans  &trans                          &trans    &trans                          &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(UP)  &kp LA(RIGHT)     &kp LA(LS(DOWN))  &trans
-        &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans    &trans  &trans  &trans          &trans        &trans        &trans      &kp LG(LS(LBKT))  &kp LG(LS(RBKT))
+        &trans                &trans                &trans                &trans                &trans                &trans                &trans                                                                                                                                                    &trans                &trans                &trans                &trans                &trans                &trans                &trans
+        &trans                &trans                &trans                &trans                &trans                &trans                &trans                                                                                                                                                    &trans                &kp LG(LEFT)          &kp LG(DOWN)          &kp LG(UP)            &kp LG(RIGHT)         &kp LA(LS(UP))        &trans
+        &trans                &trans                &trans                &trans                &trans                &trans                &trans                                      &trans                &trans                &trans                &trans                                      &trans                &kp LEFT              &kp DOWN              &kp UP                &kp RIGHT             &kp LG(LS(T))         &trans
+        &trans                &trans                &trans                &trans                &trans                &trans                                                                                  &trans                &trans                                                                                  &kp LA(LEFT)          &kp LA(DOWN)          &kp LA(UP)            &kp LA(RIGHT)         &kp LA(LS(DOWN))      &trans
+        &trans                &trans                &trans                &trans                &trans                                                            &trans                &trans                &trans                &trans                &trans                &trans                                                            &trans                &trans                &trans                &kp LG(LS(LBKT))      &kp LG(LS(RBKT))
       >;
     };
     mod {
       bindings = <
-        &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans                                                              &trans       &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans        &trans        &trans        &trans        &trans        &bootloader                                                         &bootloader  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans        &trans        &trans        &trans        &trans        &trans                &bt BT_CLR  &trans    &trans  &trans          &trans       &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans        &trans        &trans        &trans        &trans                                          &trans    &trans                               &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans        &trans        &trans        &trans                                    &trans  &trans      &trans    &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans
+        &trans                &bt BT_SEL 0          &bt BT_SEL 1          &bt BT_SEL 2          &bt BT_SEL 3          &bt BT_SEL 4          &trans                                                                                                                                                    &trans                &trans                &trans                &trans                &trans                &trans                &trans
+        &trans                &trans                &trans                &trans                &trans                &trans                &bootloader                                                                                                                                               &bootloader           &trans                &trans                &trans                &trans                &trans                &trans
+        &trans                &trans                &trans                &trans                &trans                &trans                &trans                                      &bt BT_CLR            &trans                &trans                &trans                                      &trans                &trans                &trans                &trans                &trans                &trans                &trans
+        &trans                &trans                &trans                &trans                &trans                &trans                                                                                  &trans                &trans                                                                                  &trans                &trans                &trans                &trans                &trans                &trans
+        &trans                &trans                &trans                &trans                &trans                                                            &trans                &trans                &trans                &trans                &trans                &trans                                                            &trans                &trans                &trans                &trans                &trans
       >;
     };
   };
