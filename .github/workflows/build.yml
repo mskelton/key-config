@@ -3,11 +3,27 @@ on: [push, pull_request, workflow_dispatch]
 name: Build
 
 jobs:
+  format:
+    name: Check formatting
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install dtsfmt
+        run: |
+          curl -LSfs https://mskelton.dev/dtsfmt/install > ./install
+          chmod +x ./install
+          ./install -y
+
+      - name: Check formatting
+        run: dtsfmt --check .
+
   build:
+    name: Build
     runs-on: ubuntu-latest
     container:
       image: zmkfirmware/zmk-build-arm:stable
-    name: Build
     steps:
       - name: Checkout
         uses: actions/checkout@v3
