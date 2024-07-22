@@ -12,7 +12,7 @@ jobs:
 
       - name: Install dtsfmt
         run: |
-          curl -LSfs https://mskelton.dev/dtsfmt/install > ./install
+          curl -LSfs https://go.mskelton.dev/dtsfmt/install > ./install
           chmod +x ./install
           ./install -y
 
