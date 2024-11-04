@@ -50,7 +50,7 @@
       bindings = <
         &trans   &kp F1          &kp F2             &kp F3          &kp F4              &kp F5           &trans                                                         &kp LG(LC(F10))     &kp F6          &kp F7          &kp F8              &kp F9            &kp F10            &trans
         &trans   &kp F13         &kp F14            &kp F15         &kp F16             &kp F17          &trans                                                         &kp LG(LC(F9))      &kp LG(LC(Y))   &kp LG(LC(U))   &kp LG(LC(I))       &kp LG(LC(O))     &kp LG(LC(P))      &trans
-        &trans   &kp MEH(LEFT)   &kp LA(LG(LEFT))   &kp LA(LG(F))   &kp LA(LG(RIGHT))   &kp MEH(RIGHT)   &trans            &trans   &trans   &trans   &trans            &kp LG(LA(C_PWR))   &kp LG(LC(H))   &kp LG(LC(J))   &kp LG(LC(K))       &kp LG(LC(L))     &kp LG(LC(SEMI))   &trans
+        &trans   &kp MEH(LEFT)   &kp LA(LG(LEFT))   &kp LA(LG(F))   &kp LA(LG(RIGHT))   &kp MEH(RIGHT)   &trans            &trans   &trans   &trans   &trans            &kp LG(LA(C_PWR))   &kp LG(LC(H))   &kp LG(LC(J))   &kp LG(LC(K))       &kp LG(LC(L))     &kp LA(LS(DOWN))   &trans
         &trans   &trans          &trans             &trans          &kp LG(LA(I))       &trans                                      &trans   &trans                                         &kp LG(LC(N))   &kp LG(LC(M))   &kp LG(LC(COMMA))   &kp LG(LC(DOT))   &kp LG(LC(FSLH))   &trans
         &trans   &trans          &trans             &trans          &trans                                        &trans   &trans   &trans   &trans   &trans   &trans                                       &trans          &trans              &trans            &trans             &trans
       >;
