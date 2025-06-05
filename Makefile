@@ -19,6 +19,6 @@ clean:
 
 sync:
 	git fetch upstream
-	git merge upstream/V2.0 || true
+	git merge upstream/V3.0 || true
 	git checkout --ours README.md
 	git add README.md
