@@ -5,7 +5,7 @@ My configuration for the Kenesis Advantage 360 Professional. Yep, you heard it r
 ## Downloading the latest firmware from GitHub
 
 ```bash
-gh run download -n firmware --dir firmware
+rm -rf firmware/*.uf2 && gh run download -n firmware --dir firmware
 ```
 
 ## Building firmware locally
