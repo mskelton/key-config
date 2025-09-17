@@ -1,0 +1,4 @@
+boards/
+adv360_left.keymap
+adv360_right.keymap
+*.dtsi
