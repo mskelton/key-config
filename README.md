@@ -13,7 +13,7 @@ Certain ZMK features (e.g. combos) require knowing the exact key positions in th
 ## Downloading the latest firmware from GitHub
 
 ```bash
-rm -rf firmware/*.uf2 && gh run download -n firmware-clique --dir firmware
+rm -rf firmware/*.uf2 && gh run download -n firmware-no-clique --dir firmware
 ```
 
 ## Building the Firmware in a local container
