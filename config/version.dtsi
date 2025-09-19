@@ -1,0 +1,6 @@
+#define VERSION_MACRO
+macro_ver: macro_ver {
+compatible = "zmk,behavior-macro";
+#binding-cells = <0>;
+bindings = <&kp N2>, <&kp N0>, <&kp N2>, <&kp N5>, <&kp N0>, <&kp N9>, <&kp N1>, <&kp N9>, <&kp MINUS>, <&kp M>, <&kp A>, <&kp I>, <&kp N>, <&kp MINUS>, <&kp N0>, <&kp N6>, <&kp N4>, <&kp E>, <&kp F>, <&kp D>, <&kp D>, <&kp C>, <&kp MINUS>, <&kp C>, <&kp L>, <&kp I>, <&kp Q>, <&kp U>, <&kp E>, <&kp RET>;
+};
