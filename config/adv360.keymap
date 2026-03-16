@@ -16,6 +16,13 @@
 #define HYPER(key) LA(LC(LG(LS(key))))
 #define MEH(key) LA(LC(LS(key)))
 
+// Override defaults for mod-tap
+&mt {
+  tapping-term-ms = <180>;
+  quick-tap-ms = <125>;
+  flavor = "tap-preferred";
+};
+
 // Keymap
 / {
   behaviors {
