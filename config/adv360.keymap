@@ -49,8 +49,8 @@
         &none   &kp F1          &kp F2             &kp F3          &kp F4              &kp F5           &none                                                     &kp C_VOL_UP   &kp F6          &kp F7          &kp F8              &kp F9            &kp F10            &none
         &none   &none           &none              &none           &none               &none            &none                                                     &kp C_VOL_DN   &kp LG(LC(Y))   &kp LG(LC(U))   &kp LG(LC(I))       &kp LG(LC(O))     &kp LG(LC(P))      &none
         &none   &kp MEH(LEFT)   &kp LG(LA(LEFT))   &kp LG(LA(F))   &kp LG(LA(RIGHT))   &kp MEH(RIGHT)   &none           &none   &none    &none    &none           &none          &kp LG(LC(H))   &kp LG(LC(J))   &kp LG(LC(K))       &kp LG(LC(L))     &kp LG(LC(SEMI))   &none
-        &none   &none           &none              &none           &kp LG(LA(I))       &none                                    &none    &none                                   &kp LG(LC(N))   &kp LG(LC(M))   &kp LG(LC(COMMA))   &kp LG(LC(DOT))   &kp LG(LC(FSLH))   &none
-        &none   &none           &none              &none           &none                                        &none   &none   &trans   &trans   &none   &none                                  &none           &none               &none             &none              &none
+        &trans  &none           &none              &none           &kp LG(LA(I))       &none                                    &none    &none                                   &kp LG(LC(N))   &kp LG(LC(M))   &kp LG(LC(COMMA))   &kp LG(LC(DOT))   &kp LG(LC(FSLH))   &trans
+        &none   &none           &none              &none           &none                                        &none   &none   &trans   &trans   &none   &none                                  &none           &none               &none             &none              &trans
       >;
     };
     fn {
@@ -59,8 +59,8 @@
         &none   &none   &none   &none   &none    &none   &none                                                   &none   &none          &none          &none        &none              &none              &none
         &none   &none   &none   &none   &none    &none   &none                                                   &none   &kp LG(LEFT)   &kp LG(DOWN)   &kp LG(UP)   &kp LG(RIGHT)      &kp LA(LS(UP))     &none
         &none   &none   &none   &none   &none    &none   &none           &none   &none   &none   &none           &none   &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT          &kp LG(LS(T))      &none
-        &none   &none   &none   &none   &none    &none                           &none   &none                           &kp LA(LEFT)   &kp LA(DOWN)   &kp LA(UP)   &kp LA(RIGHT)      &kp LA(LS(DOWN))   &none
-        &none   &none   &none   &none   &trans                   &none   &none   &none   &none   &none   &none                          &none          &none        &kp LG(LS(LBKT))   &kp LG(LS(RBKT))   &none
+        &trans  &none   &none   &none   &none    &none                           &none   &none                           &kp LA(LEFT)   &kp LA(DOWN)   &kp LA(UP)   &kp LA(RIGHT)      &kp LA(LS(DOWN))   &trans
+        &none   &none   &none   &none   &trans                   &none   &none   &none   &none   &none   &none                          &none          &none        &kp LG(LS(LBKT))   &kp LG(LS(RBKT))   &trans
       >;
     };
     mod {
